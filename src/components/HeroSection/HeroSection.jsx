@@ -2,10 +2,12 @@ import React from 'react';
 import BgVideo from '../../../video.mp4';
 import style from "./HeroSection.module.css";
 
+
+
 function HeroSection() {
   return (
     <div>
-      <p>Pranav Photography</p>
+      <h1>Pranav Photography</h1>
       <video className={style.bgVideo} autoPlay loop muted >
         <source src={BgVideo} type='video/mp4' />{" "}
       </video>
