@@ -1,8 +1,10 @@
+@import "tailwindcss";
+
 :root {
-  --h-clr: #f8f5f2;
+  --h-clr: #333338;
   --h-ff: "Cormorant Garamond", serif;
 }
 
 body {
-  background-color: var(--h-clr);
+  /* background-color: var(--h-clr); */
 }
