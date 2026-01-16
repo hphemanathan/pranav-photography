@@ -4,11 +4,11 @@ import style from "./Header.module.css";
 
 function Header() {
   return (
-    <div className={style.header} >
-      <div className='logo'>
+    <div className='flex'>
+      <div className='w-[150px]'>
         <img src='src/assets/Logo.png' alt='Logo' />
       </div>
-      <div className='flex'>
+      <div className='flex ms-auto'>
         <p>Services</p>
         <p>My works</p>
         <p>Who I am</p>
