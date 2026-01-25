@@ -1,5 +1,5 @@
 import React from "react"
-import HeroSection from "../HeroSection/HeroSection"
+import HeroSection from "../src/components/HeroSection/HeroSection"
 
 
 function App() {
