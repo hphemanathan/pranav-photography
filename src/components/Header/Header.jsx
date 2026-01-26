@@ -8,15 +8,16 @@ function Header() {
       <div className='w-[150px]'>
         <img src='src/assets/Logo.png' alt='Logo' />
       </div>
-      <div className={style.margin}>
-        <div className="flex">
+
+      <div className='flex m-auto'>
         <p>Services</p>
+        <p>packages</p>
         <p>My works</p>
         <p>Who I am</p>
-        </div>
-        <div>
-          <p>Book now</p>
-        </div>
+      </div>
+
+      <div className='mr-4'>
+        <p>Book now</p>
       </div>
     </div>
   );
