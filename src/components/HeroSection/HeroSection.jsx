@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 
 function HeroSection() {
   return (
-    <div>
+    <div className='h-svh'>
       <Header/>
       <h1>Pranav Photography</h1>
       <video className={style.bgVideo} autoPlay loop muted >
