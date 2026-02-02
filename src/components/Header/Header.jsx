@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./Header.module.css";
+import stylefrom "./Header.module.css";
 
 
 function Header() {
@@ -10,10 +10,10 @@ function Header() {
       </div>
 
       <div className='flex m-auto'>
-        <p>Services</p>
-        <p>packages</p>
-        <p>My works</p>
-        <p>Who I am</p>
+        <a href=''>Services</a>
+        <a>aackages</a>
+        <a>My works</a>
+        <a>Who I am</a>
       </div>
 
       <div className='mr-4'>

@@ -7,7 +7,7 @@ function Services() {
         <p>Weddings</p>
       </div>
       <div className=''>
-        <p>Engagements</p>
+        <p>E0ngagements</p>
       </div>
       <div className=''>
         <p>Birthdays</p>
@@ -15,7 +15,6 @@ function Services() {
       <div className=''>
         <p>baby shower</p>
       </div>
-      <div className=''></div>
     </div>
   );
 }
