@@ -4,14 +4,14 @@ import style from "./Header.module.css";
 
 function Header() {
   return (
-    <div className='flex items-center justify-center'>
-      <div className='w-[150px]'>
+    <div className='px-4 flex items-center justify-center m-auto'>
+      <div className='w-[200px]'>
         <img src='src/assets/Logo.png' alt='Logo' />
       </div>
 
-      <div className='flex m-auto'>
+      <div className='flex m-auto gap-4'>
         <a href=''>Services</a>
-        <a>aackages</a>
+        <a>packages</a>
         <a>My works</a>
         <a>Who I am</a>
       </div>

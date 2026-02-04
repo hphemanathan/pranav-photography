@@ -13,7 +13,9 @@ function HeroSection() {
       <div
         className='absolute top-[50%] left-[50%] translate-[-50%] translate-[-50%]
  m-auto text-center'>
-        <h1 className='text-[clamp(2.25rem,8vw,3.5rem)]'>Pranav Photography</h1>
+        <h1 className=' uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
+          Pranav Photography
+        </h1>
         <h2>Timeless Moments, Artfully Captured.</h2>
       </div>
       <video className={style.bgVideo} autoPlay loop muted>
