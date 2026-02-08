@@ -7,10 +7,3 @@
   left: 0;
   z-index: -1;
 }
-
-h1 {
-  font-family: var(--h-ff);
-  font-optical-sizing: auto;
-  font-style: normal;
-  color: var(--h-clr);
-}

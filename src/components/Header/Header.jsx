@@ -1,24 +1,22 @@
 import React from 'react';
-import style from "./Header.module.css";
+// import style from "./Header.module.css";
 
 
 function Header() {
   return (
-    <div className='px-4 flex items-center justify-center m-auto'>
-      <div className='w-[200px]'>
+    <div className='flex items-center w-svw justify-between'>
+      <div className='w-[70px]'>
         <img src='src/assets/Logo.png' alt='Logo' />
       </div>
 
-      <div className='flex m-auto gap-4'>
+      <div className='flex gap-3'>
         <a href=''>Services</a>
-        <a>packages</a>
+        <a>Packages</a>
         <a>My works</a>
         <a>Who I am</a>
-      </div>
-
-      <div className='mr-4'>
+      </div>    
         <p>Book now</p>
-      </div>
+      
     </div>
   );
 }

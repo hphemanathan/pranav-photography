@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@layer base {
+  h1 {
+    color: #f8f5f2;
+    font-family: var(--h-ff);
+  }
+
+  h2 {
+    font-family: var(--h-ff);
+  }
+}
+
 :root {
   --h-clr: #333338;
   --h-ff: "Cormorant Garamond", serif;
