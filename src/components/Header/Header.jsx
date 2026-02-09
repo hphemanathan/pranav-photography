@@ -4,19 +4,18 @@ import React from 'react';
 
 function Header() {
   return (
-    <div className='flex items-center w-svw justify-between'>
-      <div className='w-[70px]'>
+    <div className='flex items-center pt-5'>
+      <div className='w-[100px]'>
         <img src='src/assets/Logo.png' alt='Logo' />
       </div>
 
-      <div className='flex gap-3'>
+      <div className='flex flex-1 gap-3 m-auto justify-center'>
         <a href=''>Services</a>
         <a>Packages</a>
         <a>My works</a>
         <a>Who I am</a>
-      </div>    
-        <p>Book now</p>
-      
+      </div>
+      <p className='flex justify-end w-[100px]'>Book now</p>
     </div>
   );
 }
