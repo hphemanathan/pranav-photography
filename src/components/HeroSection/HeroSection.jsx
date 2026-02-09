@@ -24,10 +24,10 @@ function HeroSection() {
     gsap.from(split.chars, {
       // <- selector text, scoped to this component!
       opacity: 0,
-      y: -100,
+      y: 50,
       ease: "back",
       duration: .5,
-      stagger: 0.1,
+      stagger: 0.05,
     });
   })
 
