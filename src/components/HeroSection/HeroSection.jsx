@@ -2,6 +2,7 @@ import React from 'react';
 import BgVideo from '../../../video.mp4';
 import style from "./HeroSection.module.css";
 import Header from '../Header/Header';
+import HeaderMobile from '../HeaderMobile/HeaderMobile';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import SplitText from "gsap/src/SplitText.js";
@@ -35,10 +36,10 @@ function HeroSection() {
 
   return (
     <div className='flex justify-between flex-col h-svh mx-5'>
-      <Header />
+      <HeaderMobile/>
 
       <div
-        className='flex justify-center items-center flex-col'>
+        className='flex flex-col'>
         <h1 className=' heading font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
           Pranav Photography
         </h1>
