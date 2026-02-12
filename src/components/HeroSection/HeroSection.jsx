@@ -6,6 +6,7 @@ import HeaderMobile from '../HeaderMobile/HeaderMobile';
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import SplitText from "gsap/src/SplitText.js";
+import NavMobile from '../NavMobile/NavMobile';
 gsap.registerPlugin(useGSAP);
 
 
@@ -36,14 +37,14 @@ function HeroSection() {
 
   return (
     <div className='flex justify-between flex-col h-svh mx-5'>
-      <HeaderMobile/>
+      <HeaderMobile />
+      <NavMobile />
 
-      <div
-        className='flex flex-col'>
-        <h1 className=' heading font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
+      <div className='flex flex-col  items-center'>
+        <h1 className=' heading self-center text-center font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
           Pranav Photography
         </h1>
-        <h2 className='text-[clamp(1.75rem,5vw,2.25rem)]'>
+        <h2 className='text-[clamp(1.75rem,5vw,2.25rem)] self-center text-center'>
           Timeless Moments, Artfully Captured.
         </h2>
       </div>

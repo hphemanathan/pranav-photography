@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu } from 'lucide-react';
+import NavMobile from '../NavMobile/NavMobile';
 
 function HeaderMobile() {
   return (
@@ -9,6 +10,10 @@ function HeaderMobile() {
           <img src='src/assets/Logo.png' alt='Company Logo' />
         </div>
         <Menu  />
+        <NavMobile/>
+        
+
+       
       </div>
     </div>
   );
