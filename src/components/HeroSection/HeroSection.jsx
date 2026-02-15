@@ -15,7 +15,7 @@ gsap.registerPlugin(useGSAP);
 
 
 function HeroSection() {
-  
+  const [openMenu, setOpenMenu] = React.useState(false);
  
 
   useGSAP (( ) => {
@@ -37,8 +37,10 @@ function HeroSection() {
 
   return (
     <div className='flex justify-between flex-col h-svh mx-5'>
-      <HeaderMobile />
-      <NavMobile />
+      <HeaderMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />
+
+      {openMenu && <NavMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />}
+      {/* <NavMobile /> */}
 
       <div className='flex flex-col  items-center'>
         <h1 className=' heading self-center text-center font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>

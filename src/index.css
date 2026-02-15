@@ -11,8 +11,13 @@
   }
 }
 
+@theme {
+  --color-charcoal-500: #333338;
+  --color-lightTaupe-500: #e8e2dc;
+  --color-OffWhite-500: #f8f5f2;
+}
+
 :root {
-  --h-clr: #333338;
   --h-ff: "Cormorant Garamond", serif;
 }
 
