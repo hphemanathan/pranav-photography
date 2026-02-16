@@ -7,7 +7,9 @@ import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 import SplitText from "gsap/src/SplitText.js";
 import NavMobile from '../NavMobile/NavMobile';
+import { Transition } from 'react-transition-group';
 gsap.registerPlugin(useGSAP);
+
 
 
 
@@ -16,7 +18,19 @@ gsap.registerPlugin(useGSAP);
 
 function HeroSection() {
   const [openMenu, setOpenMenu] = React.useState(false);
+  
  
+
+
+// const onEnter = contextSafe(( ) => {
+
+// gsap.fromTo(
+//     menuRef.current,
+//     { x: "-100%" },
+//     { x: "0%", duration: 0.5, ease: "power3.out" },
+//     "-=0.2", // Start slightly before backdrop finishes
+//   );
+// });
 
   useGSAP (( ) => {
 
@@ -37,11 +51,18 @@ function HeroSection() {
 
   return (
     <div className='flex justify-between flex-col h-svh mx-5'>
-      <HeaderMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />
+     
+        <HeaderMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
-      {openMenu && <NavMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />}
-      {/* <NavMobile /> */}
-
+        {openMenu && (
+          <NavMobile
+         
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+          />
+        )}
+        {/* <NavMobile /> */}
+     
       <div className='flex flex-col  items-center'>
         <h1 className=' heading self-center text-center font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
           Pranav Photography
