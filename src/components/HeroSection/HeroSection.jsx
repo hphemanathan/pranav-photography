@@ -18,6 +18,7 @@ gsap.registerPlugin(useGSAP);
 
 function HeroSection() {
   const [openMenu, setOpenMenu] = React.useState(false);
+  const menuRef = React.useRef()
   
  
 
@@ -31,6 +32,8 @@ function HeroSection() {
 //     "-=0.2", // Start slightly before backdrop finishes
 //   );
 // });
+
+
 
   useGSAP (( ) => {
 
@@ -55,7 +58,7 @@ function HeroSection() {
         <HeaderMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
         {openMenu && (
-          <NavMobile
+          <NavMobile 
          
             openMenu={openMenu}
             setOpenMenu={setOpenMenu}

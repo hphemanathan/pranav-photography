@@ -1,36 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X } from "lucide-react";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Transition } from 'react-transition-group';
 
+gsap.registerPlugin(useGSAP);
+
 
 
 
 function NavMobile({openMenu, setOpenMenu}) {
- 
-  
+ const menuRef = React.useRef();
 
+
+  useGSAP(
+    () => {
+      gsap.from(menuRef.current, {
+        xPercent: -200,
+        duration:1,
+        ease:'power2.in'
+      });
+    },
+   
+  );
+
+  // React.useEffect (() => {
+  
+  // console.log(menuRef)
+  // }
+  // )
 
   return (
-    <Transition
-    mountOnEnter
-    unmountOnExit
-    in={openMenu}
-    addEndListener={(node, done) => {
-      const ctx = gsap.context ( ( ) => {
-        if (openMenu) {
-          gsap.to (".menu", {x:"-50"})
-        }
-      },
-
-      node)
-    }
-
-    }
-    
-    >
-      <div className='z-50 bg-lightTaupe-500 h-svh absolute top-0 left-0 w-svw basic-transition menu'>
+  
+      <div ref={menuRef} className='z-50 bg-lightTaupe-500 h-svh absolute top-0 left-0 w-svw basic-transition menu'>
         <X
           className='absolute top-[16px] right-[16px]'
           onClick={() => {
@@ -44,7 +46,7 @@ function NavMobile({openMenu, setOpenMenu}) {
           <a>Who I am</a>
         </div>
       </div>
-    </Transition>
+   
   );
 }
 

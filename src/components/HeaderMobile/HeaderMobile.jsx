@@ -4,6 +4,7 @@ import NavMobile from '../NavMobile/NavMobile';
 
 
 
+
 function HeaderMobile({ openMenu, setOpenMenu }) {
   return (
     <div>
@@ -11,9 +12,9 @@ function HeaderMobile({ openMenu, setOpenMenu }) {
         <a className='w-[75px]'>
           <img src='src/assets/Logo.png' alt='Company Logo' />
         </a>
-        <Menu onClick={ () => {
-          setOpenMenu(!openMenu)
-        } } />
+        <button onClick={ () =>setOpenMenu (!openMenu)}>
+          <Menu />
+        </button>
       </div>
     </div>
   );
