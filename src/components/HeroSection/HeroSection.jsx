@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react';
 import SplitText from "gsap/src/SplitText.js";
 import NavMobile from '../NavMobile/NavMobile';
 import { Transition } from 'react-transition-group';
+import Modal from '../NavMobile/NavMobile';
 gsap.registerPlugin(useGSAP);
 
 
@@ -17,11 +18,14 @@ gsap.registerPlugin(useGSAP);
 
 
 function HeroSection() {
-  const [openMenu, setOpenMenu] = React.useState(false);
-  const menuRef = React.useRef()
+  const [modalVisible, setModalVisible] = React.useState(false);
+  
   
  
-
+  const toggleModal = () => {
+    setModalVisible(!modalVisible);
+    console.log('working')
+  };
 
 // const onEnter = contextSafe(( ) => {
 
@@ -54,18 +58,11 @@ function HeroSection() {
 
   return (
     <div className='flex justify-between flex-col h-svh mx-5'>
-     
-        <HeaderMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <HeaderMobile toggleModal={toggleModal} />
 
-        {openMenu && (
-          <NavMobile 
-         
-            openMenu={openMenu}
-            setOpenMenu={setOpenMenu}
-          />
-        )}
-        {/* <NavMobile /> */}
-     
+<NavMobile close={toggleModal} show={modalVisible} />
+      {/* <NavMobile /> */}
+
       <div className='flex flex-col  items-center'>
         <h1 className=' heading self-center text-center font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
           Pranav Photography

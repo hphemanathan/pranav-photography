@@ -16,14 +16,16 @@ function App() {
 
   return (
     <>
-  <HeroSection/>
-  <Services/>
-  <Packages/>
-  <MyWorks/>
-  <WhoIAm/>
-  <BookNow/>
+   
+        <HeroSection />
+        <Services />
+        <Packages />
+        <MyWorks />
+        <WhoIAm />
+        <BookNow />
+     
     </>
-  )
+  );
 }
 
 export default App
