@@ -5,14 +5,15 @@ import NavMobile from '../NavMobile/NavMobile';
 
 
 
-function HeaderMobile({ toggleModal}) {
+function HeaderMobile({ openMenu, setOpenMenu }) {
   return (
     <div>
       <div className='flex items-center justify-between'>
         <a className='w-[75px]'>
           <img src='src/assets/Logo.png' alt='Company Logo' />
         </a>
-        <button onClick={toggleModal}>
+        <button
+          onClick={() => setOpenMenu(!openMenu)}>
           <Menu />
         </button>
       </div>

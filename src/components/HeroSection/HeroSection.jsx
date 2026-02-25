@@ -17,15 +17,13 @@ gsap.registerPlugin(useGSAP);
 
 
 
-function HeroSection() {
-  const [modalVisible, setModalVisible] = React.useState(false);
-  
+function HeroSection() {  
+     const menuRef = React.useRef();
+
+   const [openMenu, setOpenMenu] = React.useState(false);
   
  
-  const toggleModal = () => {
-    setModalVisible(!modalVisible);
-    console.log('working')
-  };
+
 
 // const onEnter = contextSafe(( ) => {
 
@@ -58,10 +56,16 @@ function HeroSection() {
 
   return (
     <div className='flex justify-between flex-col h-svh mx-5'>
-      <HeaderMobile toggleModal={toggleModal} />
+      <HeaderMobile openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
-<NavMobile close={toggleModal} show={modalVisible} />
-      {/* <NavMobile /> */}
+      {/* <NavMobile
+        toggleModal={toggleModal}
+        close={toggleModal}
+        show={modalVisible}
+      /> */}
+
+   
+  <NavMobile menuRef={menuRef} openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
       <div className='flex flex-col  items-center'>
         <h1 className=' heading self-center text-center font uppercase text-[clamp(2.5rem,10vw,4.5rem)] leading-[1.1] font-bold'>
