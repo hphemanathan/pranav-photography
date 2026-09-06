@@ -72,7 +72,7 @@ function HeroSection() {
           Pranav Photography
         </h1>
         <h2 className='text-[clamp(1.75rem,5vw,2.25rem)] self-center text-center'>
-          Timeless Moments, Artfully Captured.
+          Timeless Moments.
         </h2>
       </div>
       <p className='mx-auto pb-5'>Scroll to explore</p>
